@@ -1,0 +1,41 @@
+:root {
+  --primary: #00C853;
+  --primary-dark: #009624;
+  --primary-light: #5EFC82;
+  --accent: #69F0AE;
+  --dark: #121212;
+  --darker: #0A0A0A;
+  --card-bg: #F8F9FA;
+  --light: #E8F5E9;
+  --background: #FFFFFF;
+  --white: #FFFFFF;
+  --text: #212121;
+  --text-secondary: #666666;
+  --muted: #78909C;
+  --border: #E0E0E0;
+  --success: #00E676;
+  --warning: #FFD740;
+  --danger: #FF1744;
+  --info: #00B0FF;
+  --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+}

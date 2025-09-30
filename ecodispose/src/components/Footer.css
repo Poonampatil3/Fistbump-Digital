@@ -1,0 +1,160 @@
+.footer {
+  background: var(--darker);
+  color: var(--text);
+  padding: 4rem 0 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+}
+
+/* Add Wave Animation */
+.footer-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.wave {
+  opacity: 0.1;
+  position: absolute;
+  background: var(--gradient);
+  width: 200%;
+  height: 200%;
+  animation: wave 12s linear infinite;
+}
+
+@keyframes wave {
+  0% { transform: translate(-50%, -75%) rotate(0deg); }
+  100% { transform: translate(-50%, -75%) rotate(360deg); }
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Animated Icons */
+.animated-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Update existing footer styles */
+.footer-section .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4CAF50;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 5;
+}
+
+.footer-section .logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-section .logo i {
+  animation: spin 4s linear infinite;
+  color: #4CAF50;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.footer-section h4 {
+  color: #4CAF50;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #9e9e9e;
+  line-height: 1.6;
+}
+
+.footer-section p i {
+  margin-right: 8px;
+  color: #4CAF50;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+  color: #9e9e9e;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer-section ul li a i {
+  color: #4CAF50;
+  transition: transform 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  transform: translateX(10px);
+  color: #4CAF50;
+}
+
+.footer-section ul li a:hover i {
+  transform: rotate(15deg) scale(1.2);
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-content {
+    gap: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .footer-section .logo {
+    justify-content: center;
+  }
+
+  .footer-section ul li a {
+    justify-content: center;
+  }
+}
